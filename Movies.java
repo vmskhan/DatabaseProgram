@@ -10,7 +10,8 @@ import java.sql.Statement;
 
 import java.sql.ResultSet;
 
-public class Movies {		
+public class Movies 
+{		
 		
 	public static void main(String args[])
 	{
@@ -23,9 +24,11 @@ public class Movies {
 	}
 }
 
-class MovieDatabase{
+class MovieDatabase
+{
 	 
-	private Connection connect() {
+	private Connection connect() 
+	{
 	        String url = "jdbc:sqlite:D:/sqllite/databases/Filmography.db";
 	    Connection conn = null;
 	    try {
@@ -36,7 +39,8 @@ class MovieDatabase{
 	    return conn;
 	}
 	
-	 public void seedDatabase() {  
+	 public void seedDatabase()
+	 {  
 	      String moviesList[][]= {{"Spider-Man: No Way Home","Tom Holland","Zendaya","2021","Jon Watts"},
 	    		  				{"Spider-Man: Far from Home","Tom Holland","Zendaya","2019","Jon Watts"},
 	    		  				{"Descendants","Mitchell Hope","Dove Cameron","2015","Kenny Ortega"},
@@ -80,7 +84,8 @@ class MovieDatabase{
 	      
 	    }
 	 
-	 public void getAllMovies(){
+	 public void getAllMovies()
+	 {
 	        String sql = "SELECT * FROM MOVIES";
 	    
 	    try {
@@ -111,7 +116,8 @@ class MovieDatabase{
 	 
   
   
-  public void getMoviesOfActor(String actorName){
+  public void getMoviesOfActor(String actorName)
+  {
         String sql = "SELECT * FROM MOVIES WHERE Lead_Actor=?";
         
         try {
